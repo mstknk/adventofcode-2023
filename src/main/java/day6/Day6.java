@@ -23,8 +23,8 @@ public class Day6 {
         List<Long> distances = new ArrayList<>();
         String time = data.get(0).replace("Time:", "").trim();
         String distance = data.get(1).replace("Distance:", "").trim();
-        Stream.of(time.split("   ")).forEach(e -> times.add(Long.valueOf(e.trim())));
-        Stream.of(distance.split("   ")).forEach(e -> distances.add(Long.valueOf(e.trim())));
+        Stream.of(time.split(" {3}")).forEach(e -> times.add(Long.valueOf(e.trim())));
+        Stream.of(distance.split(" {3}")).forEach(e -> distances.add(Long.valueOf(e.trim())));
         for (int t = 0; t < times.size(); t++) {
             Long count = 0L;
             for (int i = 0; i < times.get(t) + 1; i++) {
